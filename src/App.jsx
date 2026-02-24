@@ -95,6 +95,23 @@ const INITIAL_PRODUCTS = [
     details: ["Petite 'Palm-Size' design", "Extra-soft chenille yarn", "Available in pastel tones", "Durable travel-friendly build"],
     accent: "#418f9f",
     isSoldOut: false
+  },
+  {
+    id: 7,
+    name: "Duke the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://placehold.co/600x600/418f9f/ffffff?text=Duke+1",
+    images: [
+      "https://placehold.co/600x600/418f9f/ffffff?text=Duke+1",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Duke+2",
+      "https://placehold.co/600x600/418f9f/ffffff?text=Duke+3",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Duke+4"
+    ],
+    description: "Duke is the noble protector of the dragon clan. With his regal stance and warm personality, he watches over his friends with quiet confidence. A true gentleman of the crochet world.",
+    details: ["Premium Mercerized Cotton", "Hand-stitched details", "Standing height: 27cm", "Child-safe materials"],
+    accent: "#ffcc5c",
+    isSoldOut: false
   }
 ];
 
