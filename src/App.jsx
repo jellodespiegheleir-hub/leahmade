@@ -101,12 +101,12 @@ const INITIAL_PRODUCTS = [
     name: "Duke the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
-    image: "https://placehold.co/600x600/418f9f/ffffff?text=Duke+1",
+    image: "https://imgur.com/H6jDmXF.png",
     images: [
-      "https://placehold.co/600x600/418f9f/ffffff?text=Duke+1",
-      "https://placehold.co/600x600/ffcc5c/ffffff?text=Duke+2",
-      "https://placehold.co/600x600/418f9f/ffffff?text=Duke+3",
-      "https://placehold.co/600x600/ffcc5c/ffffff?text=Duke+4"
+      "https://imgur.com/H6jDmXF.png",
+      "https://imgur.com/kQpt3o6.png",
+      "https://imgur.com/uVtooLr.png",
+      "https://imgur.com/4JuLcht.png"
     ],
     description: "Duke is the noble protector of the dragon clan. With his regal stance and warm personality, he watches over his friends with quiet confidence. A true gentleman of the crochet world.",
     details: ["Premium Mercerized Cotton", "Hand-stitched details", "Standing height: 27cm", "Child-safe materials"],
