@@ -121,18 +121,42 @@ const ScribbleUnderline = () => (
 );
 
 const SideBanner = ({ side = 'left', text = "" }) => (
-  <div className={`fixed top-0 ${side === 'left' ? 'left-0' : 'right-0'} h-full w-20 md:w-24 hidden lg:flex flex-col items-center justify-between py-12 z-40 bg-white/50 backdrop-blur-sm ${side === 'left' ? 'border-r' : 'border-l'} border-stone-200/30 overflow-hidden`}>
-    <div className="w-px h-32 bg-gradient-to-b from-transparent via-[#418f9f]/10 to-[#418f9f]/20"></div>
-    <div className={`flex flex-col items-center gap-12 whitespace-nowrap ${side === 'left' ? 'rotate-180' : ''}`} style={{ writingMode: 'vertical-rl' }}>
-      <div className="space-y-8 flex flex-col items-center">
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#418f9f]/30 transition-colors hover:text-[#418f9f] cursor-default">{text}</span>
-        <div className="w-px h-24 bg-stone-200 flex items-center justify-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#ffcc5c]/30"></div>
-        </div>
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#ffcc5c]/40 transition-colors hover:text-[#ffcc5c] cursor-default">{text}</span>
-      </div>
+  <div className={`fixed top-0 ${side === 'left' ? 'left-0' : 'right-0'} h-full w-40 md:w-48 hidden lg:flex flex-col items-center justify-between py-10 z-40 bg-white/50 backdrop-blur-sm ${side === 'left' ? 'border-r' : 'border-l'} border-stone-200/30 overflow-hidden`}>
+    {/* Top decorative cluster */}
+    <div className="flex items-end gap-3">
+      <div className="w-px h-20 bg-gradient-to-b from-transparent via-[#418f9f]/10 to-[#418f9f]/20"></div>
+      <div className="w-2.5 h-2.5 rounded-full bg-[#ffcc5c]/20 mb-1"></div>
+      <div className="w-px h-28 bg-gradient-to-b from-transparent via-[#ffcc5c]/10 to-[#ffcc5c]/15"></div>
     </div>
-    <div className="w-px h-32 bg-gradient-to-t from-transparent via-[#418f9f]/10 to-[#418f9f]/20"></div>
+
+    {/* Main content — two text tracks with a decorative spine */}
+    <div className={`flex items-center gap-5 whitespace-nowrap ${side === 'left' ? 'rotate-180' : ''}`} style={{ writingMode: 'vertical-rl' }}>
+      {/* First text track */}
+      <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#418f9f]/25 transition-colors hover:text-[#418f9f] cursor-default">{text}</span>
+
+      {/* Decorative spine */}
+      <div className="flex flex-col items-center gap-3 py-4">
+        <div className="w-1.5 h-1.5 rounded-full bg-[#418f9f]/15"></div>
+        <div className="w-px h-14 bg-stone-200/40"></div>
+        <div className="w-2.5 h-2.5 rounded-full bg-[#ffcc5c]/30 ring-2 ring-[#ffcc5c]/10"></div>
+        <div className="w-px h-14 bg-stone-200/40"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-[#418f9f]/15"></div>
+        <div className="w-px h-14 bg-stone-200/40"></div>
+        <div className="w-2 h-2 rounded-full bg-[#418f9f]/20 ring-2 ring-[#418f9f]/10"></div>
+        <div className="w-px h-14 bg-stone-200/40"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-[#ffcc5c]/20"></div>
+      </div>
+
+      {/* Second text track */}
+      <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#ffcc5c]/30 transition-colors hover:text-[#ffcc5c] cursor-default">{text}</span>
+    </div>
+
+    {/* Bottom decorative cluster */}
+    <div className="flex items-start gap-3">
+      <div className="w-px h-28 bg-gradient-to-t from-transparent via-[#ffcc5c]/10 to-[#ffcc5c]/15"></div>
+      <div className="w-2.5 h-2.5 rounded-full bg-[#418f9f]/20 mt-1"></div>
+      <div className="w-px h-20 bg-gradient-to-t from-transparent via-[#418f9f]/10 to-[#418f9f]/20"></div>
+    </div>
   </div>
 );
 
