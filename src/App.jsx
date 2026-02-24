@@ -61,7 +61,7 @@ const INITIAL_PRODUCTS = [
     description: "Dexter is the scholar of the group. With his distinguished posture and thoughtful expression, he makes the perfect companion for your bookshelf or workspace.",
     details: ["Premium Cotton & Bamboo Blend", "Reinforced crocheting", "Elegant Sage Green tone", "Sitting height: 22cm"],
     accent: "#ffcc5c",
-    isSoldOut: true
+    isSoldOut: false
   },
   {
     id: 4,
@@ -451,7 +451,7 @@ export default function App() {
       {/* --- NAVIGATION --- */}
       {view !== 'hero' && (
         <nav className="fixed top-0 w-full z-50 bg-[#f4f1ea]/80 backdrop-blur-xl py-6 shadow-xl shadow-stone-900/5 animate-in fade-in slide-in-from-top-4 duration-500">
-          <div className="max-w-7xl mx-auto px-8 lg:px-52 grid grid-cols-3 items-center">
+          <div className="max-w-7xl mx-auto px-8 lg:px-48 grid grid-cols-3 items-center">
             <div className="flex items-center space-x-10">
               <button onClick={goToShop} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${view === 'shop' && !showContactForm ? 'text-[#ffcc5c]' : 'text-[#418f9f] hover:text-[#ffcc5c]'}`}>Shop All</button>
               <button onClick={goToCustom} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${view === 'shop' && showContactForm ? 'text-[#ffcc5c]' : 'text-[#4a4a4a] hover:text-[#418f9f]'}`}>Custom Request</button>
@@ -485,7 +485,7 @@ export default function App() {
 
       {view === 'hero' ? (
         <section className="h-screen w-full relative flex items-center justify-center overflow-hidden">
-          <div className="max-w-5xl mx-auto px-8 lg:px-52 text-center relative z-10 animate-in fade-in duration-1000">
+          <div className="max-w-5xl mx-auto px-8 lg:px-48 text-center relative z-10 animate-in fade-in duration-1000">
             <div className="inline-flex items-center gap-4 bg-white/20 px-10 py-4 rounded-full border border-white/30 mb-12 backdrop-blur-sm">
               <span className="text-[11px] font-black uppercase tracking-[0.5em] text-[#418f9f]">Crochet Masterpieces</span>
               <Sparkles className="text-[#ffcc5c] w-3.5 h-3.5 animate-pulse" />
@@ -502,7 +502,7 @@ export default function App() {
           </div>
         </section>
       ) : view === 'about' ? (
-        <div className="max-w-5xl mx-auto px-8 lg:px-52 pb-32 pt-52 animate-in slide-in-from-bottom-8 duration-700 text-center">
+        <div className="max-w-5xl mx-auto px-8 lg:px-48 pb-32 pt-52 animate-in slide-in-from-bottom-8 duration-700 text-center">
           <div className="mb-20">
             <div className="relative inline-block">
               <div className="w-72 h-96 md:w-96 md:h-[30rem] rounded-[5rem] overflow-hidden shadow-2xl relative border-[12px] border-white z-10 mx-auto">
@@ -584,7 +584,7 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-52 pb-32 pt-52 relative z-10">
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-48 pb-32 pt-52 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="w-full lg:w-72 flex-shrink-0">
               <div className="lg:sticky lg:top-32 space-y-8">
@@ -742,7 +742,7 @@ export default function App() {
       )}
 
       <footer className="bg-white/40 backdrop-blur-md border-t border-white/60 py-24 relative z-10">
-        <div className="max-w-7xl mx-auto px-8 lg:px-52 text-center">
+        <div className="max-w-7xl mx-auto px-8 lg:px-48 text-center">
           <button 
             onClick={() => setShowLoginModal(true)} 
             className="mb-8 p-4 bg-[#f4f1ea] rounded-full text-stone-300 hover:text-[#418f9f] transition-colors"
