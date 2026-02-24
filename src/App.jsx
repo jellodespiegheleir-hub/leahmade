@@ -61,7 +61,7 @@ const INITIAL_PRODUCTS = [
     description: "Dexter is the scholar of the group. With his distinguished posture and thoughtful expression, he makes the perfect companion for your bookshelf or workspace.",
     details: ["Premium Cotton & Bamboo Blend", "Reinforced crocheting", "Elegant Sage Green tone", "Sitting height: 22cm"],
     accent: "#ffcc5c",
-    isSoldOut: true
+    isSoldOut: false
   },
   {
     id: 4,
