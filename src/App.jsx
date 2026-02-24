@@ -121,7 +121,7 @@ const ScribbleUnderline = () => (
 );
 
 const SideBanner = ({ side = 'left', text = "" }) => (
-  <div className={`fixed top-0 ${side === 'left' ? 'left-0' : 'right-0'} h-full w-20 md:w-24 hidden lg:flex flex-col items-center justify-between py-12 z-40 bg-white/50 backdrop-blur-sm border-${side === 'left' ? 'r' : 'l'} border-stone-200/30 overflow-hidden`}>
+  <div className={`fixed top-0 ${side === 'left' ? 'left-0' : 'right-0'} h-full w-20 md:w-24 hidden lg:flex flex-col items-center justify-between py-12 z-40 bg-white/50 backdrop-blur-sm ${side === 'left' ? 'border-r' : 'border-l'} border-stone-200/30 overflow-hidden`}>
     <div className="w-px h-32 bg-gradient-to-b from-transparent via-[#418f9f]/10 to-[#418f9f]/20"></div>
     <div className={`flex flex-col items-center gap-12 whitespace-nowrap ${side === 'left' ? 'rotate-180' : ''}`} style={{ writingMode: 'vertical-rl' }}>
       <div className="space-y-8 flex flex-col items-center">
