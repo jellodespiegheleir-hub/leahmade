@@ -17,7 +17,7 @@ const INITIAL_PRODUCTS = [
     name: "Dempsey the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
-    image: "https://imgur.com/UPfYcbT.png",
+    image: "https://imgur.com/p04FrDi.png",
     images: [
       "https://imgur.com/UPfYcbT.png",
       "https://imgur.com/URl9yMa.png",
@@ -34,7 +34,7 @@ const INITIAL_PRODUCTS = [
     name: "Dino the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
-    image: "https://imgur.com/YiiCcj2.png",
+    image: "https://imgur.com/XRR73wi.png",
     images: [
       "https://imgur.com/YiiCcj2.png",
       "https://imgur.com/UBZ3FvM.png",
@@ -51,7 +51,7 @@ const INITIAL_PRODUCTS = [
     name: "Dexter the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
-    image: "https://imgur.com/U0xvWB6.png",
+    image: "https://imgur.com/I4SRFz2.png",
     images: [
       "https://imgur.com/U0xvWB6.png",
       "https://imgur.com/cSniqEm.png",
@@ -68,7 +68,7 @@ const INITIAL_PRODUCTS = [
     name: "Draco the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
-    image: "https://imgur.com/IKVI2WX.png",
+    image: "https://imgur.com/yeKvxi2.png",
     images: [
       "https://imgur.com/IKVI2WX.png",
       "https://imgur.com/RGjUUU9.png",
@@ -85,7 +85,7 @@ const INITIAL_PRODUCTS = [
     name: "Dax the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
-    image: "https://imgur.com/qIYQv3i.png",
+    image: "https://imgur.com/urP9tps.png",
     images: [
       "https://imgur.com/qIYQv3i.png",
       "https://imgur.com/HmP1uo0.png",
@@ -94,6 +94,86 @@ const INITIAL_PRODUCTS = [
     description: "Dax is our miniature marvel! Small enough to sit in your palm but big enough to hold all your secrets. The perfect pocket-sized companion for grand adventures.",
     details: ["Petite 'Palm-Size' design", "Extra-soft chenille yarn", "Available in pastel tones", "Durable travel-friendly build"],
     accent: "#418f9f",
+    isSoldOut: false
+  },
+  {
+    id: 7,
+    name: "Nox the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://imgur.com/mjKIkAD.png",
+    images: [
+      "https://imgur.com/0nAR9E3.png",
+      "https://imgur.com/GmTsYRT.png",
+      "https://imgur.com/iL0AJlC.png",
+      "https://imgur.com/vyjN5s2.png"
+    ],
+    description: "Tame & protective, even in the darkest moments you'll never be alone. Light green with fuchsia accents.",
+    details: ["Pastel color palette", "Soft premium yarn", "Stuffed for extra squish", "Handmade with care"],
+    accent: "#ffcc5c",
+    isSoldOut: false
+  },
+  {
+    id: 8,
+    name: "Faye the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://imgur.com/x1AJOLB.png",
+    images: [
+      "https://imgur.com/x1AJOLB.png",
+      "https://imgur.com/wbyzQI9.png",
+      "https://imgur.com/H1OrO2E.png",
+      "https://imgur.com/oxuTkwG.png"
+    ],
+    description: "Playful, imaginative, and a little bit stubborn. Deep green with soft lila accents.",
+    details: ["Rich jewel-tone yarn", "Reinforced wings", "Hand-stitched details", "Safety eyes secured"],
+    accent: "#418f9f",
+    isSoldOut: false
+  },
+  {
+    id: 9,
+    name: "Dusty the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://imgur.com/ic5ZZhT.png",
+    images: [
+      "https://via.placeholder.com/600x800?text=Dusty+the+Dragon+1",
+      "https://via.placeholder.com/600x800?text=Dusty+the+Dragon+2"
+    ],
+    description: "Dusty loves lazy afternoons and window-sill sunbeams. A cosy companion with soft, muted colors.",
+    details: ["Muted earthy palette", "Soft acrylic blend", "Perfect shelf sitter", "Hypoallergenic stuffing"],
+    accent: "#ffcc5c",
+    isSoldOut: false
+  },
+  {
+    id: 10,
+    name: "Dotty the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://imgur.com/8PskDp2.png",
+    images: [
+      "https://via.placeholder.com/600x800?text=Dotty+the+Dragon+1",
+      "https://via.placeholder.com/600x800?text=Dotty+the+Dragon+2"
+    ],
+    description: "Dotty is playful and speckled with imaginary spots, always ready for new adventures and giggles.",
+    details: ["Playful dotted design", "Child-friendly materials", "Durable stitching", "Unique personality"],
+    accent: "#418f9f",
+    isSoldOut: false
+  },
+  {
+    id: 11,
+    name: "Leo the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://imgur.com/8Sm0luR.png",
+    images: [
+      "https://via.placeholder.com/600x800?text=Leo+the+Dragon+1",
+      "https://via.placeholder.com/600x800?text=Leo+the+Dragon+2",
+      "https://via.placeholder.com/600x800?text=Leo+the+Dragon+3"
+    ],
+    description: "Leo is a brave-hearted guardian with a mysterious glow. (Full story coming soon.)",
+    details: ["Placeholder detail 1", "Placeholder detail 2", "Placeholder detail 3", "Placeholder detail 4"],
+    accent: "#ffcc5c",
     isSoldOut: false
   }
 ];
@@ -121,18 +201,33 @@ const ScribbleUnderline = () => (
 );
 
 const SideBanner = ({ side = 'left', text = "" }) => (
-  <div className={`fixed top-0 ${side === 'left' ? 'left-0' : 'right-0'} h-full w-12 md:w-16 hidden lg:flex flex-col items-center justify-between py-12 z-40 bg-white/50 backdrop-blur-sm border-${side === 'left' ? 'r' : 'l'} border-stone-200/30 overflow-hidden`}>
-    <div className="w-px h-32 bg-gradient-to-b from-transparent via-[#418f9f]/10 to-[#418f9f]/20"></div>
-    <div className={`flex flex-col items-center gap-12 whitespace-nowrap ${side === 'left' ? 'rotate-180' : ''}`} style={{ writingMode: 'vertical-rl' }}>
-      <div className="space-y-8 flex flex-col items-center">
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#418f9f]/30 transition-colors hover:text-[#418f9f] cursor-default">{text}</span>
-        <div className="w-px h-24 bg-stone-200 flex items-center justify-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#ffcc5c]/30"></div>
+  <div
+    className={`fixed top-0 ${
+      side === 'left' ? 'left-0' : 'right-0'
+    } h-full w-14 md:w-20 hidden xl:flex flex-col items-center justify-between py-10 z-40 bg-gradient-to-b from-[#f4f1ea]/90 via-white/90 to-[#f4f1ea]/90 backdrop-blur-md shadow-xl shadow-[#418f9f]/10 border-${
+      side === 'left' ? 'r' : 'l'
+    } border-[#418f9f]/20 overflow-hidden`}
+  >
+    <div className="w-px h-28 bg-gradient-to-b from-transparent via-[#418f9f]/40 to-[#ffcc5c]/60"></div>
+    <div
+      className={`flex flex-col items-center gap-10 whitespace-nowrap ${
+        side === 'left' ? 'rotate-180' : ''
+      }`}
+      style={{ writingMode: 'vertical-rl' }}
+    >
+      <div className="space-y-6 flex flex-col items-center">
+        <span className="text-[10px] font-black uppercase tracking-[0.55em] text-[#418f9f]">
+          {text}
+        </span>
+        <div className="w-px h-20 bg-gradient-to-b from-[#418f9f]/40 via-stone-200 to-[#ffcc5c]/60 flex items-center justify-center">
+          <div className="w-2 h-2 rounded-full bg-[#ffcc5c] shadow-[0_0_10px_rgba(255,204,92,0.8)]"></div>
         </div>
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#ffcc5c]/40 transition-colors hover:text-[#ffcc5c] cursor-default">{text}</span>
+        <span className="text-[10px] font-black uppercase tracking-[0.55em] text-[#ffcc5c]">
+          {text}
+        </span>
       </div>
     </div>
-    <div className="w-px h-32 bg-gradient-to-t from-transparent via-[#418f9f]/10 to-[#418f9f]/20"></div>
+    <div className="w-px h-28 bg-gradient-to-t from-transparent via-[#418f9f]/40 to-[#ffcc5c]/60"></div>
   </div>
 );
 
@@ -258,10 +353,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f4f1ea] text-[#4a4a4a] font-sans selection:bg-[#ffcc5c]/20 overflow-x-hidden transition-colors duration-1000">
-      
-      <SideBanner side="left" text="Handmade with joy • Est. 2026" />
-      <SideBanner side="right" text="Unique design • Crochet Creations" />
-
       {/* --- ADMIN LOGIN MODAL --- */}
       {showLoginModal && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-6 animate-in fade-in duration-300">
@@ -451,25 +542,29 @@ export default function App() {
       )}
 
       {view === 'hero' ? (
-        <section className="h-screen w-full relative flex items-center justify-center overflow-hidden">
-          <div className="max-w-5xl mx-auto px-8 text-center relative z-10 animate-in fade-in duration-1000">
-            <div className="inline-flex items-center gap-4 bg-white/20 px-10 py-4 rounded-full border border-white/30 mb-12 backdrop-blur-sm">
-              <span className="text-[11px] font-black uppercase tracking-[0.5em] text-[#418f9f]">Crochet Masterpieces</span>
-              <Sparkles className="text-[#ffcc5c] w-3.5 h-3.5 animate-pulse" />
+        <>
+          <SideBanner side="left" text="Handmade with joy • Est. 2026" />
+          <SideBanner side="right" text="Unique design • Crochet Creations" />
+          <section className="min-h-screen w-full relative flex items-center justify-center overflow-hidden pb-32">
+            <div className="max-w-5xl mx-auto px-8 text-center relative z-10 animate-in fade-in duration-1000">
+              <div className="inline-flex items-center gap-4 bg-white/20 px-10 py-4 rounded-full border border-white/30 mb-12 backdrop-blur-sm">
+                <span className="text-[11px] font-black uppercase tracking-[0.5em] text-[#418f9f]">Crochet Masterpieces</span>
+                <Sparkles className="text-[#ffcc5c] w-3.5 h-3.5 animate-pulse" />
+              </div>
+              <div className="flex flex-col items-center gap-2 mb-16 relative">
+                <img src={logoUrl} alt="Leah Made" className="h-64 md:h-[32rem] object-contain transition-all duration-700 hover:rotate-1" />
+                <div className="text-[#ffcc5c] opacity-60"><ScribbleUnderline /></div>
+              </div>
+              <p className="text-xl md:text-2xl font-medium text-[#4a4a4a]/50 uppercase tracking-[1em] italic mb-12">Made with <Heart className="inline-block w-5 h-5 mx-2 text-[#ffcc5c]/60 fill-current" /> love</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+                <button onClick={goToShop} className="bg-[#418f9f] text-white px-14 py-7 rounded-full font-black text-xs uppercase tracking-[0.3em] shadow-2xl hover:bg-[#ffcc5c] transition-all flex items-center gap-5 group">Shop the Collection <ArrowRight className="w-4 h-4" /></button>
+                <button onClick={goToAbout} className="bg-white/30 text-[#418f9f] px-14 py-7 rounded-full font-black text-xs uppercase tracking-[0.3em] border border-white/40 backdrop-blur-sm transition-all">About Leah</button>
+              </div>
             </div>
-            <div className="flex flex-col items-center gap-2 mb-16 relative">
-              <img src={logoUrl} alt="Leah Made" className="h-64 md:h-[32rem] object-contain transition-all duration-700 hover:rotate-1" />
-              <div className="text-[#ffcc5c] opacity-60"><ScribbleUnderline /></div>
-            </div>
-            <p className="text-xl md:text-2xl font-medium text-[#4a4a4a]/50 uppercase tracking-[1em] italic mb-12">Made with <Heart className="inline-block w-5 h-5 mx-2 text-[#ffcc5c]/60 fill-current" /> love</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-              <button onClick={goToShop} className="bg-[#418f9f] text-white px-14 py-7 rounded-full font-black text-xs uppercase tracking-[0.3em] shadow-2xl hover:bg-[#ffcc5c] transition-all flex items-center gap-5 group">Shop the Collection <ArrowRight className="w-4 h-4" /></button>
-              <button onClick={goToAbout} className="bg-white/30 text-[#418f9f] px-14 py-7 rounded-full font-black text-xs uppercase tracking-[0.3em] border border-white/40 backdrop-blur-sm transition-all">About Leah</button>
-            </div>
-          </div>
-        </section>
+          </section>
+        </>
       ) : view === 'about' ? (
-        <div className="max-w-5xl mx-auto px-8 pb-32 pt-52 animate-in slide-in-from-bottom-8 duration-700 text-center">
+        <div className="max-w-5xl mx-auto px-8 pb-32 pt-40 animate-in slide-in-from-bottom-8 duration-700 text-center">
           <div className="mb-20">
             <div className="relative inline-block">
               <div className="w-72 h-96 md:w-96 md:h-[30rem] rounded-[5rem] overflow-hidden shadow-2xl relative border-[12px] border-white z-10 mx-auto">
@@ -514,7 +609,7 @@ export default function App() {
                     </div>
                     <div>
                       <span className="block text-[10px] font-black uppercase tracking-widest text-[#418f9f]">Instagram</span>
-                      <span className="text-xl md:text-2xl font-black text-stone-800 tracking-tight">@leahmade.be</span>
+                      <span className="text-lg md:text-xl font-black text-stone-800 tracking-tight">@leahmade.be</span>
                     </div>
                   </div>
                   <ExternalLink className="w-6 h-6 text-[#ffcc5c]" />
@@ -530,7 +625,7 @@ export default function App() {
                     </div>
                     <div>
                       <span className="block text-[10px] font-black uppercase tracking-widest text-stone-400">Email Me</span>
-                      <span className="text-xl md:text-2xl font-black text-stone-800 tracking-tight">hello@leahmade.be</span>
+                      <span className="text-lg md:text-xl font-black text-stone-800 tracking-tight break-all">hello@leahmade.be</span>
                     </div>
                   </div>
                   <ArrowUpRight className="w-6 h-6 text-stone-300" />
@@ -551,25 +646,38 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-24 pb-32 pt-52 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16">
-            <div className="w-full lg:w-72 flex-shrink-0">
-              <div className="lg:sticky lg:top-32 space-y-8">
-                <div className="bg-white/60 backdrop-blur-md p-10 rounded-[3.5rem] shadow-xl border border-white/40">
-                  <h3 className="font-black text-[11px] text-[#418f9f] mb-8 uppercase tracking-[0.4em] flex items-center gap-3"><HeartPulse className="w-4 h-4 text-[#ffcc5c]" /> Collections</h3>
-                  <ul className="space-y-3">
+        <div className="w-full pl-3 sm:pl-5 lg:pl-8 xl:pl-10 pr-4 sm:pr-8 lg:pr-14 xl:pr-20 pb-32 pt-40 relative z-10">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 xl:gap-24">
+            <div className="w-full lg:w-96 xl:w-[26rem] flex-shrink-0">
+              <div className="lg:sticky lg:top-32">
+                <div className="bg-white/60 backdrop-blur-md p-6 lg:p-8 xl:p-10 rounded-[3.5rem] shadow-xl border border-white/40 flex flex-col">
+                  <h3 className="font-black text-[12px] lg:text-[13px] text-[#418f9f] mb-6 lg:mb-8 uppercase tracking-[0.45em] flex items-center gap-3">
+                    <HeartPulse className="w-4 h-4 text-[#ffcc5c]" /> Collections
+                  </h3>
+                  <ul className="space-y-2 lg:space-y-3">
                     {CATEGORIES.map(cat => (
                       <li key={cat.name}>
-                        <button onClick={() => {setActiveCategory(cat.name); setShowContactForm(false); setSelectedProduct(null);}} className={`text-left w-full px-6 py-4 rounded-2xl transition-all font-black text-[10px] uppercase tracking-widest flex items-center justify-between ${activeCategory === cat.name && !showContactForm ? 'bg-[#418f9f] text-white shadow-lg' : 'bg-white/40 text-[#4a4a4a] hover:bg-white'}`}>
+                        <button
+                          onClick={() => {setActiveCategory(cat.name); setShowContactForm(false); setSelectedProduct(null);}}
+                          className={`text-left w-full px-6 lg:px-7 py-4 lg:py-5 rounded-2xl transition-all font-black text-[11px] lg:text-[12px] uppercase tracking-[0.25em] flex items-center justify-between ${
+                            activeCategory === cat.name && !showContactForm ? 'bg-[#418f9f] text-white shadow-lg' : 'bg-white/40 text-[#4a4a4a] hover:bg-white'
+                          }`}
+                        >
                           <div className="flex flex-col gap-1"><span>{cat.name}</span>{cat.comingSoon && <span className="text-[7px] text-[#ffcc5c] font-black">Coming Soon</span>}</div>
                           {activeCategory === cat.name && !showContactForm && <YarnBallFace className="scale-75" />}
                         </button>
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-12 pt-10 border-t border-stone-200/50">
-                    <button onClick={() => {setShowContactForm(true); setSelectedProduct(null);}} className={`w-full p-8 rounded-[2.5rem] transition-all flex flex-col items-center gap-6 border shadow-xl ${showContactForm ? 'bg-[#ffcc5c] text-white' : 'bg-[#418f9f] text-white'}`}>
-                      <Wand2 className={`w-8 h-8 ${showContactForm ? 'animate-pulse' : ''}`} /><span className="block font-black text-lg uppercase tracking-[0.1em]">Custom Plushy</span>
+                  <div className="mt-6 lg:mt-auto pt-6 lg:pt-8 border-t border-stone-200/50">
+                    <button
+                      onClick={() => {setShowContactForm(true); setSelectedProduct(null);}}
+                      className={`w-full py-6 px-5 lg:py-7 lg:px-6 rounded-[2.5rem] transition-all flex flex-col items-center gap-4 lg:gap-5 border shadow-xl ${
+                        showContactForm ? 'bg-[#ffcc5c] text-white' : 'bg-[#418f9f] text-white'
+                      }`}
+                    >
+                      <Wand2 className={`w-8 h-8 ${showContactForm ? 'animate-pulse' : ''}`} />
+                      <span className="block font-black text-lg lg:text-xl uppercase tracking-[0.15em]">Custom Plushy</span>
                     </button>
                   </div>
                 </div>
@@ -613,14 +721,14 @@ export default function App() {
                   </div>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-24">
                   {filteredProducts.map((product) => (
                     <div key={product.id} className="group flex flex-col cursor-pointer" onClick={() => openDetails(product)}>
-                      <div className="relative aspect-[4/5] bg-white rounded-[3rem] overflow-hidden mb-8 shadow-sm border border-stone-100 group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+                      <div className="relative aspect-[3/4] bg-white rounded-[3rem] overflow-hidden mb-8 shadow-sm border border-stone-100 group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                         <img 
                           src={product.image} 
                           alt={product.name} 
-                          className={`w-full h-full object-cover scale-110 group-hover:scale-[1.15] transition-transform duration-1000 ${product.isSoldOut ? 'grayscale opacity-60' : ''}`} 
+                          className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.08] ${product.isSoldOut ? 'grayscale opacity-60' : ''}`} 
                         />
                         {product.isSoldOut && (
                           <div className="absolute inset-0 bg-stone-900/40 backdrop-blur-[2px] flex items-center justify-center p-6">
