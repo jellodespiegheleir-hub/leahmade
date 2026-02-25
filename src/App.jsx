@@ -112,6 +112,74 @@ const INITIAL_PRODUCTS = [
     details: ["Premium Mercerized Cotton", "Hand-stitched details", "Standing height: 27cm", "Child-safe materials"],
     accent: "#ffcc5c",
     isSoldOut: false
+  },
+  {
+    id: 8,
+    name: "Dante the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://placehold.co/600x600/418f9f/ffffff?text=Dante+1",
+    images: [
+      "https://placehold.co/600x600/418f9f/ffffff?text=Dante+1",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Dante+2",
+      "https://placehold.co/600x600/418f9f/ffffff?text=Dante+3",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Dante+4"
+    ],
+    description: "Dante is the storyteller of the dragon family. With his warm amber tones and gentle expression, he loves nothing more than curling up and sharing tales of faraway lands.",
+    details: ["Premium Organic Cotton", "Hand-embroidered details", "Height: 24cm", "Machine washable at 30°C"],
+    accent: "#418f9f",
+    isSoldOut: false
+  },
+  {
+    id: 9,
+    name: "Dusty the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://placehold.co/600x600/ffcc5c/ffffff?text=Dusty+1",
+    images: [
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Dusty+1",
+      "https://placehold.co/600x600/418f9f/ffffff?text=Dusty+2",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Dusty+3",
+      "https://placehold.co/600x600/418f9f/ffffff?text=Dusty+4"
+    ],
+    description: "Dusty is the dreamer of the bunch. Always gazing at the clouds, this soft lavender dragon brings a sense of calm and wonder wherever it goes. A perfect bedtime companion.",
+    details: ["Ultra-soft Chenille Yarn", "Weighted base for sitting", "Height: 20cm", "Hypoallergenic filling"],
+    accent: "#ffcc5c",
+    isSoldOut: false
+  },
+  {
+    id: 10,
+    name: "Drake the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://placehold.co/600x600/418f9f/ffffff?text=Drake+1",
+    images: [
+      "https://placehold.co/600x600/418f9f/ffffff?text=Drake+1",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Drake+2",
+      "https://placehold.co/600x600/418f9f/ffffff?text=Drake+3",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Drake+4"
+    ],
+    description: "Drake is the adventurer who has explored every corner of the Crochet Kingdom. His weathered scales and bright eyes tell stories of a thousand journeys. Ready for his next one — with you.",
+    details: ["Durable Cotton-Acrylic Blend", "Reinforced limbs", "Height: 28cm", "UV-resistant colours"],
+    accent: "#418f9f",
+    isSoldOut: false
+  },
+  {
+    id: 11,
+    name: "Dobby the Dragon",
+    category: "Fantasy Collection",
+    price: 34.99,
+    image: "https://placehold.co/600x600/ffcc5c/ffffff?text=Dobby+1",
+    images: [
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Dobby+1",
+      "https://placehold.co/600x600/418f9f/ffffff?text=Dobby+2",
+      "https://placehold.co/600x600/ffcc5c/ffffff?text=Dobby+3",
+      "https://placehold.co/600x600/418f9f/ffffff?text=Dobby+4"
+    ],
+    description: "Dobby is the friendliest dragon you will ever meet. With oversized floppy ears and a perpetual grin, this cuddly companion is impossible not to love. Hugs guaranteed.",
+    details: ["Plush Velvet Yarn", "Extra-stuffed for maximum hugs", "Height: 23cm", "Child-safe certified"],
+    accent: "#ffcc5c",
+    isSoldOut: false
   }
 ];
 
@@ -137,54 +205,6 @@ const ScribbleUnderline = () => (
   </svg>
 );
 
-const SideBanner = ({ side = 'left', text = "" }) => (
-  <div className={`fixed top-0 ${side === 'left' ? 'left-0' : 'right-0'} h-full w-40 md:w-48 hidden lg:flex flex-col items-center justify-between py-8 z-40 ${side === 'left' ? 'bg-gradient-to-r from-[#418f9f]/[0.07] to-white/60' : 'bg-gradient-to-l from-[#ffcc5c]/[0.07] to-white/60'} backdrop-blur-md ${side === 'left' ? 'border-r-2 border-[#418f9f]/15' : 'border-l-2 border-[#ffcc5c]/15'} overflow-hidden`}>
-    {/* Background accent stripe */}
-    <div className={`absolute ${side === 'left' ? 'left-0' : 'right-0'} top-0 h-full w-1 ${side === 'left' ? 'bg-gradient-to-b from-transparent via-[#418f9f]/20 to-transparent' : 'bg-gradient-to-b from-transparent via-[#ffcc5c]/20 to-transparent'}`}></div>
-
-    {/* Top decorative cluster */}
-    <div className="flex items-end gap-4">
-      <div className="w-0.5 h-24 bg-gradient-to-b from-transparent via-[#418f9f]/20 to-[#418f9f]/40 rounded-full"></div>
-      <div className="flex flex-col items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-[#ffcc5c]/40 shadow-sm shadow-[#ffcc5c]/20"></div>
-        <div className="w-1.5 h-1.5 rounded-full bg-[#418f9f]/30"></div>
-      </div>
-      <div className="w-0.5 h-32 bg-gradient-to-b from-transparent via-[#ffcc5c]/15 to-[#ffcc5c]/30 rounded-full"></div>
-    </div>
-
-    {/* Main content — two text tracks with a decorative spine */}
-    <div className={`flex items-center gap-6 whitespace-nowrap ${side === 'left' ? 'rotate-180' : ''}`} style={{ writingMode: 'vertical-rl' }}>
-      {/* First text track */}
-      <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#418f9f]/50 transition-colors hover:text-[#418f9f] cursor-default drop-shadow-sm">{text}</span>
-
-      {/* Decorative spine */}
-      <div className="flex flex-col items-center gap-2.5 py-4">
-        <div className="w-2 h-2 rounded-full bg-[#418f9f]/30 shadow-sm shadow-[#418f9f]/15"></div>
-        <div className="w-0.5 h-10 bg-gradient-to-b from-[#418f9f]/25 to-stone-300/30 rounded-full"></div>
-        <div className="w-3.5 h-3.5 rounded-full bg-[#ffcc5c]/50 ring-2 ring-[#ffcc5c]/20 shadow-md shadow-[#ffcc5c]/15"></div>
-        <div className="w-0.5 h-10 bg-gradient-to-b from-stone-300/30 to-[#418f9f]/25 rounded-full"></div>
-        <div className="w-2 h-2 rounded-full bg-[#418f9f]/30 shadow-sm shadow-[#418f9f]/15"></div>
-        <div className="w-0.5 h-10 bg-gradient-to-b from-[#418f9f]/25 to-stone-300/30 rounded-full"></div>
-        <div className="w-3 h-3 rounded-full bg-[#418f9f]/40 ring-2 ring-[#418f9f]/15 shadow-md shadow-[#418f9f]/15"></div>
-        <div className="w-0.5 h-10 bg-gradient-to-b from-stone-300/30 to-[#ffcc5c]/25 rounded-full"></div>
-        <div className="w-2 h-2 rounded-full bg-[#ffcc5c]/40 shadow-sm shadow-[#ffcc5c]/15"></div>
-      </div>
-
-      {/* Second text track */}
-      <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#ffcc5c]/50 transition-colors hover:text-[#ffcc5c] cursor-default drop-shadow-sm">{text}</span>
-    </div>
-
-    {/* Bottom decorative cluster */}
-    <div className="flex items-start gap-4">
-      <div className="w-0.5 h-32 bg-gradient-to-t from-transparent via-[#ffcc5c]/15 to-[#ffcc5c]/30 rounded-full"></div>
-      <div className="flex flex-col items-center gap-2">
-        <div className="w-1.5 h-1.5 rounded-full bg-[#ffcc5c]/30"></div>
-        <div className="w-3 h-3 rounded-full bg-[#418f9f]/40 shadow-sm shadow-[#418f9f]/20"></div>
-      </div>
-      <div className="w-0.5 h-24 bg-gradient-to-t from-transparent via-[#418f9f]/20 to-[#418f9f]/40 rounded-full"></div>
-    </div>
-  </div>
-);
 
 const CrochetHookIcon = ({ className = "" }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -309,8 +329,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f4f1ea] text-[#4a4a4a] font-sans selection:bg-[#ffcc5c]/20 overflow-x-hidden transition-colors duration-1000">
       
-      <SideBanner side="left" text="Handmade with joy • Est. 2026" />
-      <SideBanner side="right" text="Unique design • Crochet Creations" />
 
       {/* --- ADMIN LOGIN MODAL --- */}
       {showLoginModal && (
@@ -468,11 +486,11 @@ export default function App() {
       {/* --- NAVIGATION --- */}
       {view !== 'hero' && (
         <nav className="fixed top-0 w-full z-50 bg-[#f4f1ea]/80 backdrop-blur-xl py-6 shadow-xl shadow-stone-900/5 animate-in fade-in slide-in-from-top-4 duration-500">
-          <div className="max-w-7xl mx-auto px-8 lg:px-48 grid grid-cols-3 items-center">
-            <div className="flex items-center space-x-10">
-              <button onClick={goToShop} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${view === 'shop' && !showContactForm ? 'text-[#ffcc5c]' : 'text-[#418f9f] hover:text-[#ffcc5c]'}`}>Shop All</button>
-              <button onClick={goToCustom} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${view === 'shop' && showContactForm ? 'text-[#ffcc5c]' : 'text-[#4a4a4a] hover:text-[#418f9f]'}`}>Custom Request</button>
-              <button onClick={goToAbout} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${view === 'about' ? 'text-[#ffcc5c]' : 'text-[#4a4a4a] hover:text-[#418f9f]'}`}>About Leah</button>
+          <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-3 items-center">
+            <div className="flex items-center space-x-4 md:space-x-8">
+              <button onClick={goToShop} className={`text-[9px] md:text-[10px] font-black uppercase tracking-[0.15em] md:tracking-[0.2em] transition-colors whitespace-nowrap ${view === 'shop' && !showContactForm ? 'text-[#ffcc5c]' : 'text-[#418f9f] hover:text-[#ffcc5c]'}`}>Shop All</button>
+              <button onClick={goToCustom} className={`text-[9px] md:text-[10px] font-black uppercase tracking-[0.15em] md:tracking-[0.2em] transition-colors whitespace-nowrap ${view === 'shop' && showContactForm ? 'text-[#ffcc5c]' : 'text-[#4a4a4a] hover:text-[#418f9f]'}`}>Custom Request</button>
+              <button onClick={goToAbout} className={`text-[9px] md:text-[10px] font-black uppercase tracking-[0.15em] md:tracking-[0.2em] transition-colors whitespace-nowrap ${view === 'about' ? 'text-[#ffcc5c]' : 'text-[#4a4a4a] hover:text-[#418f9f]'}`}>About Leah</button>
             </div>
             <div className="flex justify-center">
               <img src={logoUrl} alt="Leah Made" className="object-contain h-16 md:h-20 hover:scale-110 cursor-pointer" onClick={() => setView('hero')} />
@@ -501,25 +519,25 @@ export default function App() {
       )}
 
       {view === 'hero' ? (
-        <section className="h-screen w-full relative flex items-center justify-center overflow-hidden">
-          <div className="max-w-5xl mx-auto px-8 lg:px-48 text-center relative z-10 animate-in fade-in duration-1000">
-            <div className="inline-flex items-center gap-4 bg-white/20 px-10 py-4 rounded-full border border-white/30 mb-12 backdrop-blur-sm">
+        <section className="min-h-screen w-full relative flex flex-col items-center justify-center overflow-hidden px-6 py-12">
+          <div className="max-w-5xl mx-auto text-center relative z-10 animate-in fade-in duration-1000">
+            <div className="inline-flex items-center gap-4 bg-white/20 px-10 py-4 rounded-full border border-white/30 mb-8 backdrop-blur-sm">
               <span className="text-[11px] font-black uppercase tracking-[0.5em] text-[#418f9f]">Crochet Masterpieces</span>
               <Sparkles className="text-[#ffcc5c] w-3.5 h-3.5 animate-pulse" />
             </div>
-            <div className="flex flex-col items-center gap-2 mb-16 relative">
-              <img src={logoUrl} alt="Leah Made" className="h-64 md:h-[32rem] object-contain transition-all duration-700 hover:rotate-1" />
+            <div className="flex flex-col items-center gap-2 mb-10 relative">
+              <img src={logoUrl} alt="Leah Made" className="h-48 md:h-72 lg:h-[28rem] object-contain transition-all duration-700 hover:rotate-1" />
               <div className="text-[#ffcc5c] opacity-60"><ScribbleUnderline /></div>
             </div>
-            <p className="text-xl md:text-2xl font-medium text-[#4a4a4a]/50 uppercase tracking-[1em] italic mb-12">Made with <Heart className="inline-block w-5 h-5 mx-2 text-[#ffcc5c]/60 fill-current" /> love</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-              <button onClick={goToShop} className="bg-[#418f9f] text-white px-14 py-7 rounded-full font-black text-xs uppercase tracking-[0.3em] shadow-2xl hover:bg-[#ffcc5c] transition-all flex items-center gap-5 group">Shop the Collection <ArrowRight className="w-4 h-4" /></button>
-              <button onClick={goToAbout} className="bg-white/30 text-[#418f9f] px-14 py-7 rounded-full font-black text-xs uppercase tracking-[0.3em] border border-white/40 backdrop-blur-sm transition-all">About Leah</button>
+            <p className="text-lg md:text-xl font-medium text-[#4a4a4a]/50 uppercase tracking-[0.6em] italic mb-8">Made with <Heart className="inline-block w-5 h-5 mx-2 text-[#ffcc5c]/60 fill-current" /> love</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <button onClick={goToShop} className="bg-[#418f9f] text-white px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.3em] shadow-2xl hover:bg-[#ffcc5c] transition-all flex items-center gap-5 group">Shop the Collection <ArrowRight className="w-4 h-4" /></button>
+              <button onClick={goToAbout} className="bg-white/30 text-[#418f9f] px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.3em] border border-white/40 backdrop-blur-sm transition-all">About Leah</button>
             </div>
           </div>
         </section>
       ) : view === 'about' ? (
-        <div className="max-w-5xl mx-auto px-8 lg:px-48 pb-32 pt-52 animate-in slide-in-from-bottom-8 duration-700 text-center">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 pb-32 pt-32 md:pt-40 animate-in slide-in-from-bottom-8 duration-700 text-center">
           <div className="mb-20">
             <div className="relative inline-block">
               <div className="w-72 h-96 md:w-96 md:h-[30rem] rounded-[5rem] overflow-hidden shadow-2xl relative border-[12px] border-white z-10 mx-auto">
@@ -564,7 +582,7 @@ export default function App() {
                     </div>
                     <div>
                       <span className="block text-[10px] font-black uppercase tracking-widest text-[#418f9f]">Instagram</span>
-                      <span className="text-xl md:text-2xl font-black text-stone-800 tracking-tight">@leahmade.be</span>
+                      <span className="text-base md:text-lg font-black text-stone-800 tracking-tight">@leahmade.be</span>
                     </div>
                   </div>
                   <ExternalLink className="w-6 h-6 text-[#ffcc5c]" />
@@ -580,7 +598,7 @@ export default function App() {
                     </div>
                     <div>
                       <span className="block text-[10px] font-black uppercase tracking-widest text-stone-400">Email Me</span>
-                      <span className="text-xl md:text-2xl font-black text-stone-800 tracking-tight">hello@leahmade.be</span>
+                    <span className="text-base md:text-lg font-black text-stone-800 tracking-tight">hello@leahmade.be</span>
                     </div>
                   </div>
                   <ArrowUpRight className="w-6 h-6 text-stone-300" />
@@ -601,11 +619,11 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-48 pb-32 pt-52 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16">
-            <div className="w-full lg:w-72 flex-shrink-0">
-              <div className="lg:sticky lg:top-32 space-y-8">
-                <div className="bg-white/60 backdrop-blur-md p-10 rounded-[3.5rem] shadow-xl border border-white/40">
+        <div className="w-full mx-auto px-4 md:px-8 lg:px-12 pb-32 pt-32 md:pt-40 relative z-10">
+          <div className="flex flex-col lg:flex-row gap-8 xl:gap-12">
+            <div className="w-full lg:w-60 xl:w-72 flex-shrink-0">
+              <div className="lg:sticky lg:top-28 space-y-6">
+                <div className="bg-white/60 backdrop-blur-md p-6 xl:p-8 rounded-[2.5rem] shadow-xl border border-white/40">
                   <h3 className="font-black text-[11px] text-[#418f9f] mb-8 uppercase tracking-[0.4em] flex items-center gap-3"><HeartPulse className="w-4 h-4 text-[#ffcc5c]" /> Collections</h3>
                   <ul className="space-y-3">
                     {CATEGORIES.map(cat => (
@@ -663,10 +681,10 @@ export default function App() {
                   </div>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16">
                   {filteredProducts.map((product) => (
                     <div key={product.id} className="group flex flex-col cursor-pointer" onClick={() => openDetails(product)}>
-                      <div className="relative aspect-[4/5] bg-white rounded-[3rem] overflow-hidden mb-8 shadow-sm border border-stone-100 group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+                      <div className="relative aspect-[4/5] bg-white rounded-[2rem] xl:rounded-[3rem] overflow-hidden mb-6 shadow-sm border border-stone-100 group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                         <img 
                           src={product.image} 
                           alt={product.name} 
@@ -758,8 +776,8 @@ export default function App() {
         </div>
       )}
 
-      <footer className="bg-white/40 backdrop-blur-md border-t border-white/60 py-24 relative z-10">
-        <div className="max-w-7xl mx-auto px-8 lg:px-48 text-center">
+      <footer className="bg-white/40 backdrop-blur-md border-t border-white/60 py-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
           <button 
             onClick={() => setShowLoginModal(true)} 
             className="mb-8 p-4 bg-[#f4f1ea] rounded-full text-stone-300 hover:text-[#418f9f] transition-colors"
