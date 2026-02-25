@@ -14,7 +14,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/leahmade.be?igsh=NGVtb3IxbzRvbz
 const INITIAL_PRODUCTS = [
   {
     id: 1,
-    name: "Dempsey the Dragon",
+    name: "Astro the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/p04FrDi.png",
@@ -24,14 +24,14 @@ const INITIAL_PRODUCTS = [
       "https://imgur.com/Og9Mvmf.png",
       "https://imgur.com/GlbBqKp.png"
     ],
-    description: "Meet Dempsey, the gentle guardian of the Crochet Kingdom. Hand-crocheted with premium cotton yarn, Dempsey features soft ridges and a friendly gaze. Perfect for dragon lovers of all ages.",
+    description: "Dream big, the world is waiting. Astro is adventurous and energetic",
     details: ["100% Organic Cotton Yarn", "Safety eyes secured", "Height: 25cm", "Washable by hand"],
     accent: "#ffcc5c",
     isSoldOut: false
   },
   {
     id: 2,
-    name: "Dino the Dragon",
+    name: "Selene the dragon",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/XRR73wi.png",
@@ -41,14 +41,14 @@ const INITIAL_PRODUCTS = [
       "https://imgur.com/Fu1u9Jy.png",
       "https://imgur.com/CTgh0XS.png"
     ],
-    description: "A playful prehistoric pal ready for adventures. Dino is soft, squishy, and loves to explore new worlds with you. Handcrafted with vibrant colors and a huge heart.",
+    description: "Finding peace within yourself is also a victory. Selene is dreamy and calming",
     details: ["Soft Acrylic Blend", "Hypoallergenic stuffing", "Handmade with care", "Safety eyes installed"],
     accent: "#418f9f",
     isSoldOut: false
   },
   {
     id: 3,
-    name: "Dexter the Dragon",
+    name: "Orion the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/I4SRFz2.png",
@@ -58,14 +58,14 @@ const INITIAL_PRODUCTS = [
       "https://imgur.com/PGCwqlF.png",
       "https://imgur.com/b8uuQU9.png"
     ],
-    description: "Dexter is the scholar of the group. With his distinguished posture and thoughtful expression, he makes the perfect companion for your bookshelf or workspace.",
+    description: "Stay focused on what your heart tells you. Orion is powerfull and loyal",
     details: ["Premium Cotton & Bamboo Blend", "Reinforced crocheting", "Elegant Sage Green tone", "Sitting height: 22cm"],
     accent: "#ffcc5c",
     isSoldOut: false
   },
   {
     id: 4,
-    name: "Draco the Dragon",
+    name: "Nova the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/yeKvxi2.png",
@@ -75,14 +75,14 @@ const INITIAL_PRODUCTS = [
       "https://imgur.com/Bre032a.png",
       "https://imgur.com/5r1tb9Q.png"
     ],
-    description: "Draco is the boldest of our dragons. With his striking profile and meticulously hand-crafted wings, he brings a touch of magic and courage to any room.",
+    description: "Your light makes a difference. Nova is shiny and brave",
     details: ["Intricate Scale Pattern", "Reinforced wings for durability", "Soft Earth-toned yarn", "Safety eyes included"],
     accent: "#418f9f",
     isSoldOut: false
   },
   {
     id: 6,
-    name: "Dax the Dragon",
+    name: "Sol the Dragon",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/urP9tps.png",
@@ -91,7 +91,7 @@ const INITIAL_PRODUCTS = [
       "https://imgur.com/HmP1uo0.png",
       "https://imgur.com/dyiDFAg.png"
     ],
-    description: "Dax is our miniature marvel! Small enough to sit in your palm but big enough to hold all your secrets. The perfect pocket-sized companion for grand adventures.",
+    description: "Let you light shine, even on harder days. Sol is warm and energetic",
     details: ["Petite 'Palm-Size' design", "Extra-soft chenille yarn", "Available in pastel tones", "Durable travel-friendly build"],
     accent: "#418f9f",
     isSoldOut: false
@@ -125,37 +125,41 @@ const INITIAL_PRODUCTS = [
       "https://imgur.com/H1OrO2E.png",
       "https://imgur.com/oxuTkwG.png"
     ],
-    description: "Playful, imaginative, and a little bit stubborn. Deep green with soft lila accents.",
+    description: "being magical starts with being yourself. Faye is playful and imaginative.",
     details: ["Rich jewel-tone yarn", "Reinforced wings", "Hand-stitched details", "Safety eyes secured"],
     accent: "#418f9f",
     isSoldOut: false
   },
   {
     id: 9,
-    name: "Dusty the Dragon",
+    name: "Luna the dragon",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/ic5ZZhT.png",
     images: [
-      "https://via.placeholder.com/600x800?text=Dusty+the+Dragon+1",
-      "https://via.placeholder.com/600x800?text=Dusty+the+Dragon+2"
+      "https://imgur.com/ic5ZZhT.png",
+      "https://imgur.com/NkSUOBU.png",
+      "https://imgur.com/kQpt3o6.png",
+      "https://imgur.com/7uMWggr.png"
     ],
-    description: "Dusty loves lazy afternoons and window-sill sunbeams. A cosy companion with soft, muted colors.",
+    description: "you're stronger than you think, luna is soft and hopefull x",
     details: ["Muted earthy palette", "Soft acrylic blend", "Perfect shelf sitter", "Hypoallergenic stuffing"],
     accent: "#ffcc5c",
     isSoldOut: false
   },
   {
     id: 10,
-    name: "Dotty the Dragon",
+    name: "Mira the dragon",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/8PskDp2.png",
     images: [
-      "https://via.placeholder.com/600x800?text=Dotty+the+Dragon+1",
-      "https://via.placeholder.com/600x800?text=Dotty+the+Dragon+2"
+      "https://imgur.com/8PskDp2.png",
+      "https://imgur.com/tqk6eEE.png",
+      "https://imgur.com/wkVr6rl.png",
+      "https://imgur.com/OFXVgIT.png"
     ],
-    description: "Dotty is playful and speckled with imaginary spots, always ready for new adventures and giggles.",
+    description: "you can be soft and strong at the same time, Mira is sweet and caring.",
     details: ["Playful dotted design", "Child-friendly materials", "Durable stitching", "Unique personality"],
     accent: "#418f9f",
     isSoldOut: false
@@ -167,11 +171,11 @@ const INITIAL_PRODUCTS = [
     price: 34.99,
     image: "https://imgur.com/8Sm0luR.png",
     images: [
-      "https://via.placeholder.com/600x800?text=Leo+the+Dragon+1",
-      "https://via.placeholder.com/600x800?text=Leo+the+Dragon+2",
-      "https://via.placeholder.com/600x800?text=Leo+the+Dragon+3"
+      "https://imgur.com/8Sm0luR.png",
+      "https://imgur.com/eiAdmFJ.png",
+      "https://imgur.com/Rmqesst.png"
     ],
-    description: "Leo is a brave-hearted guardian with a mysterious glow. (Full story coming soon.)",
+    description: "dare to grow, even when its scary, leo is firey and brave",
     details: ["Placeholder detail 1", "Placeholder detail 2", "Placeholder detail 3", "Placeholder detail 4"],
     accent: "#ffcc5c",
     isSoldOut: false
