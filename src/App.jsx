@@ -226,6 +226,7 @@ const SideBanner = ({ side = 'left', text = "" }) => (
           {text}
         </span>
       </div>
+      <div className="w-0.5 h-24 bg-gradient-to-t from-transparent via-[#418f9f]/20 to-[#418f9f]/40 rounded-full"></div>
     </div>
     <div className="w-px h-28 bg-gradient-to-t from-transparent via-[#418f9f]/40 to-[#ffcc5c]/60"></div>
   </div>
@@ -509,7 +510,7 @@ export default function App() {
       {/* --- NAVIGATION --- */}
       {view !== 'hero' && (
         <nav className="fixed top-0 w-full z-50 bg-[#f4f1ea]/80 backdrop-blur-xl py-6 shadow-xl shadow-stone-900/5 animate-in fade-in slide-in-from-top-4 duration-500">
-          <div className="max-w-7xl mx-auto px-8 grid grid-cols-3 items-center">
+          <div className="max-w-7xl mx-auto px-8 lg:px-48 grid grid-cols-3 items-center">
             <div className="flex items-center space-x-10">
               <button onClick={goToShop} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${view === 'shop' && !showContactForm ? 'text-[#ffcc5c]' : 'text-[#418f9f] hover:text-[#ffcc5c]'}`}>Shop All</button>
               <button onClick={goToCustom} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${view === 'shop' && showContactForm ? 'text-[#ffcc5c]' : 'text-[#4a4a4a] hover:text-[#418f9f]'}`}>Custom Request</button>
@@ -817,7 +818,7 @@ export default function App() {
       )}
 
       <footer className="bg-white/40 backdrop-blur-md border-t border-white/60 py-24 relative z-10">
-        <div className="max-w-7xl mx-auto px-8 lg:px-24 text-center">
+        <div className="max-w-7xl mx-auto px-8 lg:px-48 text-center">
           <button 
             onClick={() => setShowLoginModal(true)} 
             className="mb-8 p-4 bg-[#f4f1ea] rounded-full text-stone-300 hover:text-[#418f9f] transition-colors"
