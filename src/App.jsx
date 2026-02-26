@@ -27,11 +27,12 @@ const INITIAL_PRODUCTS = [
     description: "Dream big, the world is waiting. Astro is adventurous and energetic",
     details: ["100% Organic Cotton Yarn", "Safety eyes secured", "Height: 25cm", "Washable by hand"],
     accent: "#ffcc5c",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T590kE9YJd6FtFK0rSSvDmd"
   },
   {
     id: 2,
-    name: "Selene the dragon",
+    name: "Selene",
     category: "Fantasy Collection",
     price: 34.99,
     image: "https://imgur.com/XRR73wi.png",
@@ -44,7 +45,8 @@ const INITIAL_PRODUCTS = [
     description: "Finding peace within yourself is also a victory. Selene is dreamy and calming",
     details: ["Soft Acrylic Blend", "Hypoallergenic stuffing", "Handmade with care", "Safety eyes installed"],
     accent: "#418f9f",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T590jE9YJd6FtFKl7dtclfk"
   },
   {
     id: 3,
@@ -61,7 +63,8 @@ const INITIAL_PRODUCTS = [
     description: "Stay focused on what your heart tells you. Orion is powerfull and loyal",
     details: ["Premium Cotton & Bamboo Blend", "Reinforced crocheting", "Elegant Sage Green tone", "Sitting height: 22cm"],
     accent: "#ffcc5c",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T591jE9YJd6FtFKDTZTCuxz"
   },
   {
     id: 4,
@@ -78,7 +81,8 @@ const INITIAL_PRODUCTS = [
     description: "Your light makes a difference. Nova is shiny and brave",
     details: ["Intricate Scale Pattern", "Reinforced wings for durability", "Soft Earth-toned yarn", "Safety eyes included"],
     accent: "#418f9f",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T590jE9YJd6FtFKX2t7YEwV"
   },
   {
     id: 6,
@@ -94,7 +98,8 @@ const INITIAL_PRODUCTS = [
     description: "Let you light shine, even on harder days. Sol is warm and energetic",
     details: ["Petite 'Palm-Size' design", "Extra-soft chenille yarn", "Available in pastel tones", "Durable travel-friendly build"],
     accent: "#418f9f",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T592aE9YJd6FtFKyUHXzKjn"
   },
   {
     id: 7,
@@ -111,7 +116,8 @@ const INITIAL_PRODUCTS = [
     description: "Tame & protective, even in the darkest moments you'll never be alone. Light green with fuchsia accents.",
     details: ["Pastel color palette", "Soft premium yarn", "Stuffed for extra squish", "Handmade with care"],
     accent: "#ffcc5c",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T593CE9YJd6FtFKtali5SIu"
   },
   {
     id: 8,
@@ -128,7 +134,8 @@ const INITIAL_PRODUCTS = [
     description: "being magical starts with being yourself. Faye is playful and imaginative.",
     details: ["Rich jewel-tone yarn", "Reinforced wings", "Hand-stitched details", "Safety eyes secured"],
     accent: "#418f9f",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T593oE9YJd6FtFKMp4abVL5"
   },
   {
     id: 9,
@@ -145,7 +152,8 @@ const INITIAL_PRODUCTS = [
     description: "you're stronger than you think, luna is soft and hopefull x",
     details: ["Muted earthy palette", "Soft acrylic blend", "Perfect shelf sitter", "Hypoallergenic stuffing"],
     accent: "#ffcc5c",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T594OE9YJd6FtFKlXfaIcwy"
   },
   {
     id: 10,
@@ -162,7 +170,8 @@ const INITIAL_PRODUCTS = [
     description: "you can be soft and strong at the same time, Mira is sweet and caring.",
     details: ["Playful dotted design", "Child-friendly materials", "Durable stitching", "Unique personality"],
     accent: "#418f9f",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T594oE9YJd6FtFKnC4OLvhT"
   },
   {
     id: 11,
@@ -178,7 +187,8 @@ const INITIAL_PRODUCTS = [
     description: "dare to grow, even when its scary, leo is firey and brave",
     details: ["Placeholder detail 1", "Placeholder detail 2", "Placeholder detail 3", "Placeholder detail 4"],
     accent: "#ffcc5c",
-    isSoldOut: false
+    isSoldOut: false,
+    stripePriceId: "price_1T595OE9YJd6FtFKR47vJGbH"
   }
 ];
 
